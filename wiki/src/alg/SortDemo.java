@@ -69,7 +69,7 @@ public class SortDemo {
     }
 
     private int partition(int[] items) {
-        return null;
+        return 0;
     }
 
     private void megreSort(int[] items, int start, int end) {
