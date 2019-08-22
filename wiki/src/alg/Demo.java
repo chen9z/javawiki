@@ -11,6 +11,6 @@ public class Demo {
 
         SortDemo sortDemo = new SortDemo();
         int[] a = {1, 3, 2, 9, 8, 0, 11, 23, 5};
-        System.out.println(Arrays.toString(sortDemo.insertSort(a)));
+        System.out.println(Arrays.toString(sortDemo.quickSort(a)));
     }
 }

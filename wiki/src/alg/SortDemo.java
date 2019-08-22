@@ -61,15 +61,30 @@ public class SortDemo {
      * @param items
      * @return
      */
-    public void quickSort(int[] items) {
-        int len = items.length;
-        int p=partition(items);
-
-        megreSort(items, p, len);
+    public int[] quickSort(int[] items) {
+        megreSort(items,0 , items.length-1);
+        return items;
     }
 
-    private int partition(int[] items) {
-        return 0;
+    private int partition(int[] items,int start,int end) {
+        int pivot = items[end];
+        int i=start;
+        for (int j = start; j < end; j++) {
+            if (items[j] < pivot) {
+                if (i == j) {
+                    i++;
+                }else {
+                    int t = items[i];
+                    items[i++] = items[j];
+                    items[j]=t;
+                }
+            }
+        }
+
+        int tmp = items[i];
+        items[i] = items[end];
+        items[end] = tmp;
+        return i;
     }
 
     private void megreSort(int[] items, int start, int end) {
@@ -77,14 +92,9 @@ public class SortDemo {
         if (start >=end) {
             return;
         }
-        int pivot = items[end];
-
-        int i = start, j = end;
-        while (i < j) {
-            if (items[i] > pivot) {
-
-            }
-        }
+        int pivot = partition(items,start,end);
+        megreSort(items, start, pivot - 1);
+        megreSort(items, pivot + 1, end);
     }
 
 }
