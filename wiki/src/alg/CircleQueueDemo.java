@@ -25,7 +25,6 @@ public class CircleQueueDemo {
         return true;
     }
 
-
     public String pop() {
         if (head == tail) return "已取出全部数据";
         head++;
