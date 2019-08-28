@@ -10,7 +10,7 @@ public class Demo {
         SortDemo sortDemo = new SortDemo();
         int[] a = {1, 3, 2, 9, 8,8, 0, 11, 23, 5};
 
-        int left=1;
+        System.out.println(sortDemo.simpleHalf(a,9));
 
 //        System.out.println(a[left++]);
 //        System.out.println(left);
