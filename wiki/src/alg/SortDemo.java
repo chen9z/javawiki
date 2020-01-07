@@ -121,6 +121,7 @@ public class SortDemo {
 
     /**
      * 简单的二分查找
+     *
      * @param items
      * @param value
      * @return
@@ -129,20 +130,38 @@ public class SortDemo {
         int left = 0;
         int right = items.length - 1;
         while (left >= right) {
-            int mid = (left + right)/2;
-            System.out.println("》》》》》》》》》》》》" + "执行了几次：" + mid+":left"+left+":right:"+right);
+            int mid = (left + right) / 2;
+            System.out.println("》》》》》》》》》》》》" + "执行了几次：" + mid + ":left" + left + ":right:" + right);
             if (items[mid] == value) {
                 return 1;
             } else {
                 if (items[mid] > value) {
-                    right = mid+1;
+                    right = mid + 1;
                 } else {
-                    left = mid+1;
+                    left = mid + 1;
                 }
-
             }
         }
         return -1;
     }
 
+
+    public void sortByList(int[] items, int value) {
+        int length = items.length;
+        for (int i = 0; i < length; i++) {
+
+        }
+    }
+
+
+    public void fun1(int[] items, int value) {
+        while (items.length > 10) {
+            int temp = value;
+            int left=0;
+            int right=items.length-1;
+        }
+    }
+
+    public void fun2(String params) {
+    }
 }

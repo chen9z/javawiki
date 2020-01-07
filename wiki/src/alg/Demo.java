@@ -12,8 +12,5 @@ public class Demo {
 
         System.out.println(sortDemo.simpleHalf(a,9));
 
-//        System.out.println(a[left++]);
-//        System.out.println(left);
-//        System.out.println(Arrays.toString(sortDemo.quickSort(a)));
     }
 }
