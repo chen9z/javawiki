@@ -9,9 +9,9 @@ public class SingleLink<T> {
     public T val;
 
 
-//    public SingleLink(T[] array) {
-//        insertLink(array);
-//    }
+    public SingleLink(T[] array) {
+        insertLink(array);
+    }
 
     /**
      * 链表反转
@@ -157,7 +157,7 @@ public class SingleLink<T> {
      * @param array
      * @param <T>
      */
-    public   <T> void insertLink(T[] array) {
+    public  <T> Node insertLink(T[] array) {
         Node temp = null;
         for (T t : array) {
             if (head == null) {
@@ -169,6 +169,7 @@ public class SingleLink<T> {
                 temp=next;
             }
         }
+        return head;
     }
 
 
@@ -193,7 +194,7 @@ public class SingleLink<T> {
      * @param node
      * @return
      */
-    public String getLinkValue(Node node) {
+    public  String getLinkValue(Node node) {
         StringBuilder builder = new StringBuilder();
         if (node == null) {
             System.out.println("this link is empty");
@@ -207,4 +208,72 @@ public class SingleLink<T> {
         }
         return builder.toString();
     }
+
+    /**
+     * 反转链表
+     * @param node
+     * @return
+     */
+    public  Node revertLink(Node node) {
+        if (node == null || node.next == null) {
+            return head;
+        }
+        Node pre=null;
+        Node cur=node;
+        while (cur != null) {
+            Node next = cur.next;
+            cur.next=pre;
+            pre=cur;
+            cur=next;
+        }
+        return pre;
+    }
+
+    /**
+     * 链表中环的检测
+     * @param node
+     * @return
+     */
+    public boolean hasCircle(Node node) {
+        return false;
+    }
+
+    /**
+     * 有序链表合并
+     * @param m
+     * @param node
+     * @return
+     */
+    public Node mergeNode(Node m, Node node) {
+        return null;
+    }
+
+    /**
+     * 删除倒数第N个节点
+     * @param index
+     */
+    public void deleteNodeByLast(int index) {
+
+    }
+
+    public void deleteNode(T val) {
+
+        if (head.val.equals(val)) {
+            head=head.next;
+        }
+        Node pre=null;
+        Node cur=head;
+
+        while (cur != null) {
+            if (cur.val.equals(val)) {
+                pre.next=cur.next;
+                cur=cur.next;
+                continue;
+            }
+            pre=cur;
+            cur=cur.next;
+        }
+
+    }
+
 }
