@@ -128,7 +128,7 @@ public class SortDemo {
     public int simpleHalf(int[] items, int value) {
         int left = 0;
         int right = items.length - 1;
-        while (left >= right) {
+        while (left <= right) {
             int mid = (left + right)/2;
             System.out.println("》》》》》》》》》》》》" + "执行了几次：" + mid+":left"+left+":right:"+right);
             if (items[mid] == value) {
@@ -143,6 +143,60 @@ public class SortDemo {
             }
         }
         return -1;
+    }
+
+    /**
+     * 递归二分查找
+     * @param items
+     * @param value
+     * @return
+     */
+    public int recursionHalf(int [] items,int value) {
+
+        int left=0;
+        int right=items.length-1;
+
+        return rh(items, left, right, value);
+
+    }
+
+    private int rh(int[] items, int left, int right, int value) {
+        if(left>right) return -1;
+
+        int mid=(left+right)/2;
+        if (items[mid] ==value) {
+            return mid;
+        }else {
+            if (items[mid] > value) {
+                return rh(items, left+1, mid, value);
+            }else {
+                return rh(items, mid + 1, right, value);
+            }
+        }
+    }
+
+    /**
+     * 插入排序
+     * @param array
+     * @return
+     */
+    public int[] insertSort(int[] array) {
+        int n =array.length;
+        if(n<=1) return array;
+        int value;
+        for (int i = 1; i<n; i++) {
+            value = array[i];
+            int j=i-1;
+            for (;j>=0;j--) {
+                if (array[j] > value) {
+                    array[j + 1] = array[j];
+                }else {
+                    break;
+                }
+            }
+            array[j+1]=value;
+        }
+        return array;
     }
 
 }
