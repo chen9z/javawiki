@@ -1,5 +1,7 @@
 package alg;
 
+import java.util.List;
+
 /**
  * 实现可以自动扩容的队列
  * Created by chen on 2019/8/15.

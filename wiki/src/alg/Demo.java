@@ -7,13 +7,10 @@ public class Demo {
 
     public static void main(String[] args) {
 
-        SortDemo sortDemo = new SortDemo();
-        int[] a = {1, 3, 2, 9, 8,8, 0, 11, 23, 5};
-
-        System.out.println(sortDemo.simpleHalf(a,9));
-
-//        System.out.println(a[left++]);
-//        System.out.println(left);
-//        System.out.println(Arrays.toString(sortDemo.quickSort(a)));
+        SingleLink<String> singleLink = new SingleLink<String>(new String[]{"1", "2", "2","3", "4","5"});
+//        System.out.println(singleLink.getLinkValue(singleLink.insertLink(new String[]{"1", "2", "3", "4"})));
+//        System.out.println(singleLink.isCircleString(new String[]{"1", "2", "3", "4","5","4","3","2","1"}));
+        singleLink.deleteNode("3");
+        singleLink.printAll();
     }
 }
