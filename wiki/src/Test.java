@@ -1,4 +1,5 @@
-import alg.QueueDemo;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by chen on 2019/8/14.
@@ -7,16 +8,16 @@ import alg.QueueDemo;
 public class Test {
 
     public static void main(String[] args) {
-        QueueDemo stackDemo = new QueueDemo(3);
-        stackDemo.push("11");
-        stackDemo.push("22");
-        stackDemo.push("33");
-        System.out.println(stackDemo.pop());
-        stackDemo.push("44");
+//        int [] arr=new int[]{1,2,1};
+//        SortDemo demo=new SortDemo();
+//        demo.quickSort(arr, 0, arr.length - 1);
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.println(arr[i]);
+//        }
 
-
-        System.out.println(stackDemo.pop());
-        System.out.println(stackDemo.pop());
-        System.out.println(stackDemo.pop());
+        int[] array = new int[]{0, 3, 2};
+        Arrays.sort(array);
+        Arrays.stream(array).forEach(System.out::println);
     }
+
 }
