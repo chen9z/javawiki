@@ -1,4 +1,5 @@
-import alg.MidSearchDemo;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by chen on 2019/8/14.
@@ -7,9 +8,10 @@ import alg.MidSearchDemo;
 public class Test {
 
     public static void main(String[] args) {
-        MidSearchDemo searchDemo = new MidSearchDemo();
-        int[] a = new int[]{1, 2,3, 3,4, 6,8,9,10};
-        System.out.println(searchDemo.firstPartSearch(a, 3));
-
+        int number=10;
+        System.out.println(number >> 1);
+        System.out.println(number << 1);
+        System.out.println(number>>>1);
     }
+
 }

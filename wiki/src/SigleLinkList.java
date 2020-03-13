@@ -315,9 +315,9 @@
             // int data[] = {1,2,5,2,1};
             int data[] = {1,2,5,3,1};
 
-            for(int i =0; i < data.length; i++){
+            for (int datum : data) {
                 //link.insertToHead(data[i]);
-                link.insertTail(data[i]);
+                link.insertTail(datum);
             }
             // link.printAll();
             // Node p = link.inverseLinkList_head(link.head);
