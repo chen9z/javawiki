@@ -240,14 +240,35 @@ public class SingleLink<T> {
 
     /**
      * 有序链表合并
-     * @param m
-     * @param node
+     * @param l1
+     * @param l2
      * @return
      */
-    public Node mergeNode(Node m, Node node) {
+    public Node mergeNode(Node l1, Node l2) {
+        if(l1==null) return l2;
+        if(l2==null) return l1;
+        Node node=null;
+        while (l1.next == null || l2.next == null) {
+        }
         return null;
     }
 
+    /**
+     * 检测是否有环
+     * @param head
+     * @return
+     */
+    public boolean hasCycle(Node head) {
+        if(head==null||head.next==null) return false;
+        Node p=head;
+        Node q=head;
+        while(q!=null&&q.next!=null){
+            p=p.next;
+            q=q.next.next;
+            if(p==q) return true;
+        }
+        return false;
+    }
     /**
      * 删除倒数第N个节点
      * @param index

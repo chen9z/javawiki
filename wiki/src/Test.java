@@ -1,4 +1,4 @@
-import alg.QueueDemo;
+import alg.MidSearchDemo;
 
 /**
  * Created by chen on 2019/8/14.
@@ -7,16 +7,9 @@ import alg.QueueDemo;
 public class Test {
 
     public static void main(String[] args) {
-        QueueDemo stackDemo = new QueueDemo(3);
-        stackDemo.push("11");
-        stackDemo.push("22");
-        stackDemo.push("33");
-        System.out.println(stackDemo.pop());
-        stackDemo.push("44");
+        MidSearchDemo searchDemo = new MidSearchDemo();
+        int[] a = new int[]{1, 2,3, 3,4, 6,8,9,10};
+        System.out.println(searchDemo.firstPartSearch(a, 3));
 
-
-        System.out.println(stackDemo.pop());
-        System.out.println(stackDemo.pop());
-        System.out.println(stackDemo.pop());
     }
 }
