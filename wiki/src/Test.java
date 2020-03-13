@@ -8,10 +8,8 @@ import java.util.Arrays;
 public class Test {
 
     public static void main(String[] args) {
-        int number=10;
-        System.out.println(number >> 1);
-        System.out.println(number << 1);
-        System.out.println(number>>>1);
+        int number = 1;
+        System.out.println((1 << 30)+1);
     }
 
 }
