@@ -29,6 +29,7 @@ public class MidSearchDemo {
     public int firstPartSearch(int[] array, int value) {
         int low=0;
         int high=array.length-1;
+        String ss = "43213412";
         return firstPart(array, low, high, value);
     }
 
@@ -49,4 +50,22 @@ public class MidSearchDemo {
             return firstPart(array, low, high, value);
         }
     }
+        public int countCharacters(String[] words, String chars) {
+          int res=0;
+          String tem;
+            for (int i = 0; i < words.length; i++) {
+                tem=chars;
+                for (int j = 0; j < words[i].length(); j++) {
+                    if (tem.indexOf(words[i].charAt(j)) == -1) {
+                        break;
+                    }else {
+                        tem=tem.replaceFirst(words[i].charAt(j)+"", "");
+                    }
+                    if (j == words[i].length() - 1) {
+                        res+=words[i].length();
+                    }
+                }
+            }
+            return res;
+        }
 }
